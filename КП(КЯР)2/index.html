@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Sky — Авиакомпания</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon" aria-hidden="true"><img src="assets/logo-mark.svg" width="26" height="26" alt=""></span>
+                <h1>APEX <span>SKY</span></h1>
+            </a>
+            <nav>
+                <a href="index.html" class="active">Главная</a>
+                <a href="hotels.html">Отели и контакты</a>
+                 <a href="info.html">Информация</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">✨ Лучшая авиакомпания 2026</div>
+            <h2>Откройте мир <span>вместе с нами</span></h2>
+            <p>Комфортные перелёты в более чем 150 направлений по всему миру. Безопасность, надёжность и превосходный сервис.</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-primary">🔍 Найти рейс</a>
+                <a href="#flights" class="btn btn-secondary">📍 Популярные направления</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+        <div class="container">
+            <div class="booking-card">
+                <div class="booking-header">
+                    <h3>Забронировать рейс</h3>
+                    <p>Найдите лучшие предложения для вашего путешествия</p>
+                </div>
+                <div class="booking-tabs">
+                    <input type="radio" name="trip" id="roundtrip" checked>
+                    <label for="roundtrip">Туда и обратно</label>
+                    <input type="radio" name="trip" id="oneway">
+                    <label for="oneway">В одну сторону</label>
+                </div>
+
+                <form class="booking-form" id="searchForm">
+                    <div class="form-group form-group--relative">
+                        <label>Откуда</label>
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Москва (SVO)" id="fromCity" autocomplete="off">
+                            <div id="fromSuggestions" class="suggestions-box" style="display: none;"></div>
+                        </div>
+                        <span id="fromError" class="error-message"></span>
+                    </div>
+                    <div class="form-group form-group--relative">
+                        <label>Куда</label>
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Санкт-Петербург (LED)" id="toCity" autocomplete="off">
+                            <div id="toSuggestions" class="suggestions-box" style="display: none;"></div>
+                        </div>
+                        <span id="toError" class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Дата вылета</label>
+                        <input type="date" id="departDate">
+                    </div>
+                    <div class="form-group" id="returnDateGroup">
+                        <label>Дата возврата</label>
+                        <input type="date" id="returnDate">
+                        <span id="dateError" class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Пассажиры</label>
+                        <select id="passengers">
+                            <option>1 взрослый</option>
+                            <option>2 взрослых</option>
+                            <option>3 взрослых</option>
+                            <option>4+ взрослых</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Класс</label>
+                        <select id="classSelect">
+                            <option>Эконом</option>
+                            <option>Комфорт</option>
+                            <option>Бизнес</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn btn-primary btn-search">🔍 Найти рейсы</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h3>Почему выбирают нас</h3>
+                <p>Мы делаем ваши путешествия комфортными и незабываемыми</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h4>Безопасность</h4>
+                    <p>Современный флот и высочайшие стандарты безопасности полётов</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h4>150+ направлений</h4>
+                    <p>Летаем по всему миру — от Калининграда до Владивостока и дальше</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h4>Лучшие цены</h4>
+                    <p>Гибкая ценовая политика и выгодные акции для наших клиентов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="flights" id="flights">
+        <div class="container">
+            <div class="section-header">
+                <h3>Рекомендуемые рейсы</h3>
+                <p>Самые востребованные направления этого сезона</p>
+            </div>
+            <div class="flights-grid">
+                <div class="flight-card">
+                    <div class="flight-image" style="background-image: url('https://images.unsplash.com/photo-1635237929027-819d8cce4c26?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8JUQwJUJGJUQwJUI4JUQxJTgyJUQwJUI1JUQxJTgwfGVufDB8fDB8fHww');">
+                        <span class="flight-badge">🔥 Хит продаж</span>
+                    </div>
+                    <div class="flight-content">
+                        <div class="flight-route">
+                            <div class="flight-city"><h4>Москва</h4><p>SVO</p><span class="flight-time">10:30</span></div>
+                            <div class="flight-line"><span></span><div class="flight-plane">✈️</div><span></span></div>
+                            <div class="flight-city"><h4>Санкт-Петербург</h4><p>LED</p><span class="flight-time">12:00</span></div>
+                        </div>
+                        <div class="flight-details">
+                            <div class="flight-info"><span>Время в пути</span><strong>1ч 30м</strong></div>
+                            <div class="flight-price"><span>от</span><strong>145 BYN</strong></div>
+                        </div>
+                        <button type="button" class="btn btn-primary book-flight-btn" data-flight="Москва → Санкт-Петербург" data-price="145">Забронировать</button>
+                    </div>
+                </div>
+
+                <div class="flight-card">
+                    <div class="flight-image" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80');">
+                        <span class="flight-badge">☀️ К морю</span>
+                    </div>
+                    <div class="flight-content">
+                        <div class="flight-route">
+                            <div class="flight-city"><h4>Москва</h4><p>DME</p><span class="flight-time">14:20</span></div>
+                            <div class="flight-line"><span></span><div class="flight-plane">✈️</div><span></span></div>
+                            <div class="flight-city"><h4>Сочи</h4><p>AER</p><span class="flight-time">17:00</span></div>
+                        </div>
+                        <div class="flight-details">
+                            <div class="flight-info"><span>Время в пути</span><strong>2ч 40м</strong></div>
+                            <div class="flight-price"><span>от</span><strong>199 BYN</strong></div>
+                        </div>
+                        <button type="button" class="btn btn-primary book-flight-btn" data-flight="Москва → Сочи" data-price="199">Забронировать</button>
+                    </div>
+                </div>
+
+                <div class="flight-card">
+                    <div class="flight-image" style="background-image: url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80');">
+                        <span class="flight-badge">🏛️ Культура</span>
+                    </div>
+                    <div class="flight-content">
+                        <div class="flight-route">
+                            <div class="flight-city"><h4>Москва</h4><p>SVO</p><span class="flight-time">09:15</span></div>
+                            <div class="flight-line"><span></span><div class="flight-plane">✈️</div><span></span></div>
+                            <div class="flight-city"><h4>Казань</h4><p>KZN</p><span class="flight-time">11:00</span></div>
+                        </div>
+                        <div class="flight-details">
+                            <div class="flight-info"><span>Время в пути</span><strong>1ч 45м</strong></div>
+                            <div class="flight-price"><span>от</span><strong>155 BYN</strong></div>
+                        </div>
+                        <button type="button" class="btn btn-primary book-flight-btn" data-flight="Москва → Казань" data-price="155">Забронировать</button>
+                    </div>
+                </div>
+
+                <div class="flight-card">
+                    <div class="flight-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1663947578363-0c922043489d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8JUQwJUIyJUQwJUJCJUQwJUIwJUQwJUI0JUQwJUI4JUQwJUIyJUQwJUJFJUQxJTgxJUQxJTgyJUQwJUJFJUQwJUJBfGVufDB8fDB8fHww');">
+                        <span class="flight-badge">🌏 Дальний Восток</span>
+                    </div>
+                    <div class="flight-content">
+                        <div class="flight-route">
+                            <div class="flight-city"><h4>Москва</h4><p>SVO</p><span class="flight-time">23:55</span></div>
+                            <div class="flight-line"><span></span><div class="flight-plane">✈️</div><span></span></div>
+                            <div class="flight-city"><h4>Владивосток</h4><p>VVO</p><span class="flight-time">15:30</span></div>
+                        </div>
+                        <div class="flight-details">
+                            <div class="flight-info"><span>Время в пути</span><strong>8ч 35м</strong></div>
+                            <div class="flight-price"><span>от</span><strong>465 BYN</strong></div>
+                        </div>
+                        <button type="button" class="btn btn-primary book-flight-btn" data-flight="Москва → Владивосток" data-price="465">Забронировать</button>
+                    </div>
+                </div>
+
+<div class="flight-card">
+    <div class="flight-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1666211586960-fe75a0879882?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
+        <span class="flight-badge">⛰️ Урал</span>
+    </div>
+    <div class="flight-content">
+        <div class="flight-route">
+            <div class="flight-city"><h4>Москва</h4><p>SVO</p><span class="flight-time">12:05</span></div>
+            <div class="flight-line"><span></span><div class="flight-plane">✈️</div><span></span></div>
+            <div class="flight-city"><h4>Екатеринбург</h4><p>SVX</p><span class="flight-time">16:40</span></div>
+        </div>
+        <div class="flight-details">
+            <div class="flight-info"><span>Время в пути</span><strong>2ч 35м</strong></div>
+            <div class="flight-price"><span>от</span><strong>205 BYN</strong></div>
+        </div>
+        <button type="button" class="btn btn-primary book-flight-btn" data-flight="Москва → Екатеринбург" data-price="205">Забронировать</button>
+    </div>
+</div>
+
+<div class="flight-card">
+    <div class="flight-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1694475484971-a4b987162fed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8JUQwJUJCJUQwJUJFJUQwJUJEJUQwJUI0JUQwJUJFJUQwJUJEfGVufDB8fDB8fHww'); background-size: cover; background-position: center;">
+        <span class="flight-badge">❄️ Сибирь</span>
+    </div>
+    <div class="flight-content">
+        <div class="flight-route">
+            <div class="flight-city"><h4>Москва</h4><p>DME</p><span class="flight-time">20:45</span></div>
+            <div class="flight-line"><span></span><div class="flight-plane">✈️</div><span></span></div>
+            <div class="flight-city"><h4>Новосибирск</h4><p>OVB</p><span class="flight-time">07:10</span></div>
+        </div>
+        <div class="flight-details">
+            <div class="flight-info"><span>Время в пути</span><strong>4ч 25м</strong></div>
+            <div class="flight-price"><span>от</span><strong>299 BYN</strong></div>
+        </div>
+        <button type="button" class="btn btn-primary book-flight-btn" data-flight="Москва → Новосибирск" data-price="299">Забронировать</button>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item"><h4>15M+</h4><p>Пассажиров в год</p></div>
+                <div class="stat-item"><h4>150+</h4><p>Направлений</p></div>
+                <div class="stat-item"><h4>85</h4><p>Самолётов</p></div>
+                <div class="stat-item"><h4>99.2%</h4><p>Довольных клиентов</p></div>
+            </div>
+        </div>
+    </section>
+
+  <footer>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <span class="logo-icon" aria-hidden="true"><img src="assets/logo-mark.svg" width="22" height="22" alt=""></span>
+                <h3>APEX <span>SKY</span></h3>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/145/145813.png" alt="VK">
+                </a>
+                <a href="#" class="social-icon" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+                </a>
+                <a href="#" class="social-icon" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Apex Sky Airlines. Все права защищены.</p>
+            <p><a href="data/flights-catalog.xml">XML-каталог предложений</a></p>
+        </div>
+    </div>
+</footer>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3>Бронирование рейса</h3>
+            <p id="modalFlightInfo"></p>
+            <form id="bookingFormModal">
+                <div class="form-group"><label>ФИО полностью</label><input type="text" id="fullName" placeholder="Иванов Иван Иванович" required></div>
+                <div class="form-group"><label>Email</label><input type="email" id="email" placeholder="ivan@example.com" required></div>
+                <div class="form-group"><label>Телефон</label><input type="tel" id="phone" placeholder="+375 (29) 123-45-67" required></div>
+                <div class="form-group"><label>Номер паспорта</label><input type="text" id="passport" placeholder="1234 567890" required></div>
+                <div class="form-group"><label>Предпочитаемое место</label><select id="seatPreference"><option>У окна</option><option>У прохода</option><option>Не важно</option></select></div>
+                <button type="submit" class="btn btn-primary">Подтвердить бронь</button>
+            </form>
+        </div>
+    </div>
+<div id="searchResultsModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" id="closeSearchModal">&times;</span>
+        <h3>📋 Найденные рейсы</h3>
+        <div id="searchResultsContent" class="result-details">
+        </div>
+        <div class="result-price" id="searchResultPrice">Стоимость появится после поиска</div>
+        <button type="button" id="proceedToBookBtn" class="btn btn-primary btn-full">Забронировать этот рейс</button>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://apexsky.example/catalog" version="1.0" updated="2026-05-11">
+  <meta>
+    <airline>Apex Sky Airlines</airline>
+    <currency code="BYN">белорусский рубль</currency>
+  </meta>
+  <flights>
+    <flight id="LED-001" route="Москва — Санкт-Петербург" from="SVO" to="LED" priceBYN="145" badge="hit"/>
+    <flight id="AER-002" route="Москва — Сочи" from="DME" to="AER" priceBYN="199" badge="sea"/>
+    <flight id="KZN-003" route="Москва — Казань" from="SVO" to="KZN" priceBYN="155" badge="culture"/>
+    <flight id="VVO-004" route="Москва — Владивосток" from="SVO" to="VVO" priceBYN="465" badge="far-east"/>
+    <flight id="SVX-005" route="Москва — Екатеринбург" from="SVO" to="SVX" priceBYN="205" badge="ural"/>
+    <flight id="OVB-006" route="Москва — Новосибирск" from="DME" to="OVB" priceBYN="299" badge="siberia"/>
+  </flights>
+  <hotels>
+    <hotel id="H-SPB" name="Grand Palace Hotel" city="Санкт-Петербург" pricePerNightBYN="310"/>
+    <hotel id="H-SOC" name="Seaside Resort &amp; Spa" city="Сочи" pricePerNightBYN="445"/>
+    <hotel id="H-KZN" name="Kazan Royal Hotel" city="Казань" pricePerNightBYN="252"/>
+    <hotel id="H-VVO" name="Pacific View Hotel" city="Владивосток" pricePerNightBYN="270"/>
+    <hotel id="H-MSK" name="Moscow Luxury Suites" city="Москва" pricePerNightBYN="675"/>
+    <hotel id="H-SVO" name="Airport Express Inn" city="Шереметьево" pricePerNightBYN="153"/>
+  </hotels>
+</catalog>
